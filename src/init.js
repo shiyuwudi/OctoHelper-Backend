@@ -9,6 +9,7 @@ async function init() {
   await initTables();
   // 插入数据
   await insertData();
+  console.log('[初始化]插入数据结束');
 }
 
 module.exports = {

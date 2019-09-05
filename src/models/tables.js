@@ -33,11 +33,11 @@ ItemsCategory.init({
     unique: true,
     comment: '物品类别id',
   },
-  w_name: {
+  name: {
     type: STRING,
     comment: '物品类别名称',
   },
-  w_icon: {
+  icon: {
     type: STRING,
     unique: true,
     comment: '物品类别图标文件名（唯一）',
@@ -66,11 +66,11 @@ Jobs.init({
     unique: true,
     comment: '职业id',
   },
-  j_name: {
+  name: {
     type: STRING,
     comment: '职业名称',
   },
-  j_icon: {
+  icon: {
     type: STRING,
     unique: true,
     comment: '职业图标文件名（唯一）',
@@ -95,11 +95,11 @@ Parameter.init({
     unique: true,
     comment: '量表id',
   },
-  par_name: {
+  name: {
     type: STRING,
     comment: '量表名称',
   },
-  par_desc: {
+  desc: {
     type: STRING,
     comment: '量表描述',
   },
@@ -110,6 +110,14 @@ Parameter.init({
 
 // 物品表（包含武器、防具和物品）。
 Items.init({
+  id: {
+    type: INTEGER,
+    allowNull: false,
+    autoIncrement: true,
+    primaryKey: true,
+    unique: true,
+    comment: '物品id',
+  },
   created_at: {
     type: DATE,
     defaultValue: NOW,
@@ -124,65 +132,52 @@ Items.init({
       key: 'id',
     },
   },
-  w_name: {
+  name: {
     type: STRING,
     comment: '武器名称',
   },
-  w_buy_price: {
+  buy_price: {
     type: INTEGER,
     comment: '物品在商店购买时的价钱',
   },
-  w_sell_price: {
+  sell_price: {
     type: INTEGER,
     comment: '物品在商店卖出时的价钱',
   },
-  w_phy_atk: {
+  phy_atk: {
     type: INTEGER,
     comment: '物攻',
   },
-  w_atr_atk: {
+  atr_atk: {
     type: INTEGER,
     comment: '属攻',
   },
-  // 物攻+20 = 物攻（属性）    +(增减)     20(数值)
-  w_buff_par: {
-    type: INTEGER,
-    comment: '增益的属性',
-    references: {
-      model: Parameter,
-      key: 'id',
-    },
-  },
-  w_buff_sign: {
+  buff: {
     type: STRING,
-    comment: '增益的类型（+或-）',
+    comment: '增益',
   },
-  w_buff_value: {
-    type: INTEGER,
-    comment: '增益的数值',
-  },
-  w_rest_effects: {
+  rest_effects: {
     type: STRING,
     comment: '武器或者装备的其他效果',
   },
-  w_get: {
+  get: {
     type: STRING,
     comment: '主要的获取方式（只包含文字）',
   },
-  w_get_icon: {
+  get_icon: {
     type: STRING,
     comment: '图标',
   },
-  w_get_map_link: {
+  get_map_link: {
     type: STRING,
     comment: '地图连接',
   },
-  w_effect: {
+  effect: {
     type: STRING,
     comment: '物品效果',
   },
 }, {
-  sequelize,
+  ...commonOptions,
   tableName: 'weapons',
 });
 
@@ -200,7 +195,9 @@ function initTables() {
 }
 
 module.exports = {
+  initTables,
   Items,
   ItemsCategory,
-  initTables,
+  Jobs,
+  Parameter,
 };

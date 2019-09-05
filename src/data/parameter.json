@@ -1,0 +1,61 @@
+{
+  "Parameter": [
+    {
+      "id": 1,
+      "name": "物理攻撃力(物攻)",
+      "desc": "物理攻撃で与えるダメージに影響"
+    },
+    {
+      "id": 2,
+      "name": "属性攻撃力(属攻)",
+      "desc": "属性攻撃で与えるダメージに影響"
+    },
+    {
+      "id": 3,
+      "name": "行動速度(速度)",
+      "desc": "戦闘の行動順に影響するほか、相手のクリティカルヒットの発生確率が下がる"
+    }
+  ],
+  "Items": [
+    {
+      "id": 1,
+      "category_id": 1,
+      "name": "ただの剣",
+      "buy_price": null,
+      "sell_price": null,
+      "phy_atk": 0,
+      "atr_atk": 0,
+      "buff": null,
+      "rest_effects": null,
+      "get": "剣を何も装備していないとき自動的に装備",
+      "get_icon": null
+    },
+    {
+      "id": 2,
+      "category_id": 1,
+      "name": "ローグソード",
+      "buy_price": null,
+      "sell_price": 30,
+      "phy_atk": 8,
+      "atr_atk": 0,
+      "buff": "行動速度+2",
+      "rest_effects": null,
+      "get": "オルベリク、テリオンの初期装備",
+      "get_icon": null
+    }
+  ],
+  "Jobs": [
+    { "id": 1, "name": "剣士" },
+    { "id": 2, "name": "盗賊" },
+    { "id": 3, "name": "ルーンマスター" },
+    { "id": 4, "name": "武芸家" }
+  ],
+  "ItemsCategory": [
+    {
+      "id": 1,
+      "name": "剣",
+      "icon": "",
+      "can_equip_job_ids": "1,2,3,4"
+    }
+  ]
+}
