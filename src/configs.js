@@ -1,11 +1,12 @@
 module.exports = {
   db: {
     mysql: {
-      host: '10.0.4.130',
+      host: 'localhost',
       user: 'root',
       password: '123456',
       database: 'octopath_traveler',
       multipleStatements: true,
+      port: 3307,
     },
   },
 };

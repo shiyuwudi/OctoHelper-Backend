@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 const {
-  host, user, password, database,
+  host, user, password, database, port,
 } = require('../configs').db.mysql;
 
 const orm = (() => {
@@ -13,7 +13,7 @@ const orm = (() => {
     const dbName = db || database;
     let unique = map[dbName];
     if (unique === undefined) {
-      unique = new Sequelize(`mysql://${user}:${password}@${host}:3306/${dbName}`, {
+      unique = new Sequelize(`mysql://${user}:${password}@${host}:${port}/${dbName}`, {
         logging: false,
         pool: {
           max: 100,

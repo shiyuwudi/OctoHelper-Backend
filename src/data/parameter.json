@@ -1,4 +1,12 @@
 {
+  "ItemsCategory": [
+    {
+      "id": 1,
+      "name": "剣",
+      "icon": "",
+      "can_equip_job_ids": "1,2,3,4"
+    }
+  ],
   "Parameter": [
     {
       "id": 1,
@@ -49,13 +57,5 @@
     { "id": 2, "name": "盗賊" },
     { "id": 3, "name": "ルーンマスター" },
     { "id": 4, "name": "武芸家" }
-  ],
-  "ItemsCategory": [
-    {
-      "id": 1,
-      "name": "剣",
-      "icon": "",
-      "can_equip_job_ids": "1,2,3,4"
-    }
   ]
 }
