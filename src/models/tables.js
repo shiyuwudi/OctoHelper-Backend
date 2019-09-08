@@ -6,7 +6,7 @@ const {
 } = Sequelize;
 
 class Items extends Sequelize.Model {}
-class ItemsCategory extends Sequelize.Model {}
+class ItemsCategory extends Sequelize.Model {} // 物品种类
 class Jobs extends Sequelize.Model {} // 职业
 class Parameter extends Sequelize.Model {} // 属性
 
@@ -39,7 +39,6 @@ ItemsCategory.init({
   },
   icon: {
     type: STRING,
-    unique: true,
     comment: '物品类别图标文件名（唯一）',
   },
   created_at: {
@@ -73,7 +72,7 @@ Jobs.init({
   icon: {
     type: STRING,
     unique: true,
-    comment: '职业图标文件名（唯一）',
+    comment: '职业图标文件名（唯一，应该是初期是这个职业的角色的头像）',
   },
   created_at: {
     type: DATE,

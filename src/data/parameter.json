@@ -1,11 +1,15 @@
 {
   "ItemsCategory": [
-    {
-      "id": 1,
-      "name": "剣",
-      "icon": "",
-      "can_equip_job_ids": "1,2,3,4"
-    }
+    {"id": 1, "name": "剣", "icon": "cate_swords.png", "can_equip_job_ids": "1,2,3,4"},
+    {"id": 2, "name": "槍", "icon": "cate_polearms.png", "can_equip_job_ids": "1,8,11,4"},
+    {"id": 3, "name": "短剣", "icon": "cate_daggers.png", "can_equip_job_ids": "5,2,11,4"},
+    {"id": 4, "name": "斧", "icon": "cate_axes.png", "can_equip_job_ids": "6,7,3,4"},
+    {"id": 5, "name": "弓", "icon": "cate_bows.png", "can_equip_job_ids": "7,10,12,4"},
+    {"id": 6, "name": "仗", "icon": "cate_staves.png", "can_equip_job_ids": "8,9,12,4"},
+    {"id": 7, "name": "盾", "icon": "cate_shield.png", "can_equip_job_ids": ""},
+    {"id": 8, "name": "頭", "icon": "", "can_equip_job_ids": ""},
+    {"id": 9, "name": "体", "icon": "", "can_equip_job_ids": ""},
+    {"id": 10, "name": "アクセサリー", "icon": "", "can_equip_job_ids": ""}
   ],
   "Parameter": [
     {
@@ -50,12 +54,33 @@
       "rest_effects": null,
       "get": "オルベリク、テリオンの初期装備",
       "get_icon": null
+    },
+    {
+      "id": 3,
+      "category_id": 2,
+      "name": "ただの槍",
+      "buy_price": null,
+      "sell_price": null,
+      "phy_atk": 0,
+      "atr_atk": 0,
+      "buff": null,
+      "rest_effects": null,
+      "get": "槍を何も装備していないとき自動的に装備",
+      "get_icon": null
     }
   ],
   "Jobs": [
     { "id": 1, "name": "剣士" },
     { "id": 2, "name": "盗賊" },
     { "id": 3, "name": "ルーンマスター" },
-    { "id": 4, "name": "武芸家" }
+    { "id": 4, "name": "武芸家" },
+    { "id": 5, "name": "踊子" },
+    { "id": 6, "name": "薬師" },
+    { "id": 7, "name": "狩人" },
+    { "id": 8, "name": "神官" },
+    { "id": 9, "name": "学者" },
+    { "id": 10, "name": "商人" },
+    { "id": 11, "name": "星詠人" },
+    { "id": 12, "name": "魔術師"}
   ]
 }
